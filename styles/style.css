@@ -3,6 +3,7 @@ body{
     
 }
 
+/* Barra de navegacion */
 
 .topbar{
     position: fixed;
@@ -157,6 +158,19 @@ body{
     border: 0.1px solid #59564c;
 }
 
+.image-card{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.image-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 
 
@@ -194,15 +208,13 @@ button:hover {
     padding: 0 5px 20px 10px;
     display: flex;
     flex-direction: column;
-    
-    
     font-size: 18px;
     font-weight: 300;
     
     
 }
 
-.ima
+
 
 .cards-title{
     color: rgb(204, 202, 191);
@@ -317,41 +329,111 @@ button:hover {
 }
 
 .info{
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+
+
+
+}
+
+.info-container{
     
     display: flex;
     flex-direction: row;
+    justify-content: center;
     height: 100%;
-    width: 100%;
-    gap: 20px;
+    gap: 10px;
+    box-sizing: border-box;
+    max-width: 80%;
 }
 
-.main-images{
+/* Imagen principal del grid (izquierda) */
+
+.main-image {
+    position: relative;
     width: 50%;
     height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    
 }
 
-.main-images img{
+.main-image img{
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
+    
 }
 
+.h2-contact{
+    position: absolute;
+    left: 5%;
+    bottom: 3%; 
+    font-family: "Playfair Display", serif;
+    font-size: 75px;
+    font-weight: 100;
+    color: white;
+}
+
+/* Conjunto de grid de la derecha */
 
 .more-info{
     width: 50%;
     display: grid;
+ /* Al hacer el footer y especificar "auto" en su linea solo coge el espacio que ocupa */
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr, 1fr, auto;
     gap: 10px;
+    
 }
 
 .uno{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
+    border-radius: 12px;
+    color: white;
+    border: 0.1px solid #dad6d617;
+    gap: 20px;
+    padding-top: 40px;
+    
+    
 }
 
+
+
+.h3-info1{
+    font-family: "Playfair Display", serif;
+    font-weight: 100;
+    color: #ccc8c8;
+}
+
+.horario{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-family: "Playfair Display", serif;
+    font-weight: 100;
+    color: #ccc8c8;
+    
+}
+
+.text-horario li{
+    padding: 5px;
+    
+}
+
+
 .dos{
+    width: 100%;
+    height: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -362,15 +444,113 @@ button:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
+    border-radius: 12px;
+    
+}
+
+
+.tres{
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    color: white;
+}
+
+.map{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
     border-radius: 12px;
 }
 
+.map img{
+   
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    /* Si la imagen tiene elemento encima en HTML hay que ponerlo antes que la imagen para que nos desaparezca con el "Display block" */
+}
+
+
+
+.route{
+    color: white;
+    background-color: #0c0e0e;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 8px;
+    border-radius: 12px 0;
+    font-family: "Playfair Display", serif;
+    font-size: 12px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    transition:  0.4s;
+    
+    
+
+}
+
+.route:hover{
+    background-color: white;
+    color: black;
+}
+
 .cuatro{
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    border: 0.1px solid #dad6d617;
+    border-radius: 12px;
+    gap: 30px;
+    padding-top: 40px;
+    box-sizing: border-box;
+}
+.h3-info2{
+    font-family: "Playfair Display", serif;
+    font-weight: 100;
+    color: #ccc8c8;
+
+}
+.contact-info{
+    width: 80%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-text{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-align: end;
+    font-size: 12px;
+    font-family: "Playfair Display", serif;
+    font-weight: 100;
+    color: #ccc8c8;
+
+}
+
+.footer{
+    width: 100%;
+    grid-column: span 2;
+    display: flex;
     justify-content: center;
     align-items: center;
+    gap: 30px;
+    font-size: 12px;
+    color: #ccc8c8;
+
+    border-radius: 12px;
+    border: 0.1px solid #dad6d617;
+    
+    
+    
     
 }
 
